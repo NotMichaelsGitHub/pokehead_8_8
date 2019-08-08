@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="modal.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://drvic10k.github.io/bootstrap-sortable/Contents/bootstrap-sortable.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>
+    <script src="https://drvic10k.github.io/bootstrap-sortable/Scripts/bootstrap-sortable.js"></script>
+
+</head>
+<body>
+
+<br>
+
+<div class="container">
+
+    <h1>Pokemon Search</h1>
+    <br>
+
+    <!--set search-->
+    <div id="selected-sets" class="well well-sm">
+        <h4>Sun and Moon Series</h4>
+        <div class="row">
+<!--            <div class="col-sm-2">-->
+
+<!--                <label class="custom-control custom-checkbox">-->
+<!--                    <input type="checkbox" class="custom-control-input" value="sm1">-->
+<!--                    <span class="custom-control-indicator">Sun & Moon</span>-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--            <div class="col-sm-2">-->
+
+<!--                <label class="custom-control custom-checkbox">-->
+<!--                    <input type="checkbox" class="custom-control-input" value="sm2">-->
+<!--                    <span class="custom-control-indicator">Guardians Rising</span>-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--            <div class="col-sm-2">-->
+
+<!--                <label class="custom-control custom-checkbox">-->
+<!--                    <input type="checkbox" class="custom-control-input" value="sm3">-->
+<!--                    <span class="custom-control-indicator">Burning Shadows</span>-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--            <div class="col-sm-2">-->
+
+<!--                <label class="custom-control custom-checkbox">-->
+<!--                    <input type="checkbox" class="custom-control-input" value="sm35">-->
+<!--                    <span class="custom-control-indicator">Shining Legends</span>-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--            <div class="col-sm-2">-->
+
+<!--                <label class="custom-control custom-checkbox">-->
+<!--                    <input type="checkbox" class="custom-control-input" value="sm4">-->
+<!--                    <span class="custom-control-indicator">Crimson Invasion</span>-->
+<!--                </label>-->
+
+<!--            </div>-->
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm5" checked>
+                    <span class="custom-control-indicator">Ultra Prism</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm6" checked>
+                    <span class="custom-control-indicator">Forbidden Light</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm7" checked>
+                    <span class="custom-control-indicator">Celestial Storm</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm75" checked>
+                    <span class="custom-control-indicator">Dragon Majesty</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm8" checked>
+                    <span class="custom-control-indicator">Lost Thunder</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm9" checked>
+                    <span class="custom-control-indicator">Team Up</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm10" checked>
+                    <span class="custom-control-indicator">Unbroken Bonds</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="sm11" checked>
+                    <span class="custom-control-indicator">Unified Minds</span>
+                </label>
+
+            </div>
+            <div class="col-sm-2">
+
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="smp" checked>
+                    <span class="custom-control-indicator">Promos</span>
+                </label>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!--advanced search-->
+    <div class="well wel-sm">
+        <div id="tabs">
+            <div class="row">
+                <div class="card-header col-sm-2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Stage
+                        </button>
+                    </h5>
+                </div>
+
+                <div class="card-header col-sm-2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                            Rarity
+                        </button>
+                    </h5>
+                </div>
+
+                <div class="card-header col-sm-2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                            Type
+                        </button>
+                    </h5>
+                </div>
+
+                <div class="card-header col-sm-2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                            Ability
+                        </button>
+                    </h5>
+                </div>
+
+                <div class="card-header col-sm-2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                            Retreat Cost
+                        </button>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div id="accordion">
+            <div class="card">
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="selected-stages" class="card-body">
+                        <h5>Stage</h5>
+                        <div class="row">
+
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" value="Basic" checked>
+                                    <span class="custom-control-indicator">Basic</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Stage 1" checked>
+                                    <span class="custom-control-indicator">Stage 1</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Stage 2" checked>
+                                    <span class="custom-control-indicator">Stage 2</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="selected-rarity" class="card-body">
+                        <h5>Rarity</h5>
+                        <div class="row">
+
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Common" checked>
+                                    <span class="custom-control-indicator">Common</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Uncommon" checked>
+                                    <span class="custom-control-indicator">Uncommon</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Rare" checked>
+                                    <span class="custom-control-indicator">Rare</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Rare Holo" checked>
+                                    <span class="custom-control-indicator">Rare Holo</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Rare Holo gx" checked>
+                                    <span class="custom-control-indicator">Rare Holo gx</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="RareUltra" checked>
+                                    <span class="custom-control-indicator">RareUltra</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Rare Secret" checked>
+                                    <span class="custom-control-indicator">Rare Secret</span>
+                                </label>
+
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="selected-types" class="card-body">
+                        <h5>Type</h5>
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Colorless" checked>
+                                    <span class="custom-control-indicator">Colorless</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Grass" checked>
+                                    <span class="custom-control-indicator">Grass</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Fire" checked>
+                                    <span class="custom-control-indicator">Fire</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Water" checked>
+                                    <span class="custom-control-indicator">Water</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Lightning" checked>
+                                    <span class="custom-control-indicator">Lightning</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Psychic" checked>
+                                    <span class="custom-control-indicator">Psychic</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Fighting" checked>
+                                    <span class="custom-control-indicator">Fighting</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Darkness" checked>
+                                    <span class="custom-control-indicator">Darkness</span>
+                                </label>
+
+                            </div>
+
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Metal" checked>
+                                    <span class="custom-control-indicator">Metal</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Dragon" checked>
+                                    <span class="custom-control-indicator">Dragon</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="Fairy" checked>
+                                    <span class="custom-control-indicator">Fairy</span>
+                                </label>
+
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="selected-ability" class="card-body">
+                        <h5>Has Ability</h5>
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="yes" checked>
+                                    <span class="custom-control-indicator">Has Ability</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="no" checked>
+                                    <span class="custom-control-indicator">No Ability</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+                <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="selected-retreat" class="card-body">
+                        <h5>Retreat Cost</h5>
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="0" checked>
+                                    <span class="custom-control-indicator">None</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="1" checked>
+                                    <span class="custom-control-indicator">One</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="2" checked>
+                                    <span class="custom-control-indicator">Two</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="3" checked>
+                                    <span class="custom-control-indicator">Three</span>
+                                </label>
+
+                            </div>
+                            <div class="col-sm-2">
+
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" value="4" checked>
+                                    <span class="custom-control-indicator">Four</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--even handlers-->
+    <br>
+    <div class="text-center">
+            <button id="submit_button">Search</button>
+            <button id="clear_button">Clear</button>
+            <button id="compare_button" onclick="show_cart()">Compare</button>
+        </div>
+
+    <br><br>
+
+    <!--search for the table-->
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+
+    <!--table -->
+    <table id="display" class="table table-bordered table-striped sortable" data-toggle="table">
+        <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th class="col-sm-2">Set</th>
+            <th class="col-sm-1">Type</th>
+            <th class="col-sm-1">Stage</th>
+            <th class="col-sm-1">HP</th>
+            <th class="col-sm-1">Ability</th>
+            <th class="col-sm-1">RT Cost</th>
+            <th class="col-sm-1">Rarity</th>
+            <th class="col-sm-1">Image</th>
+            <th class="col-sm-1">Add to cart</th>
+        </tr>
+        </thead>
+
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Card Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6 text-center">
+                                <h2 id="id">Label Name</h2>
+                                <br>
+                                <p id="name"></p>
+                                <p id="set"></p>
+                                <p id="type"></p>
+                                <p id="stage"></p>
+                                <p id="hp"></p>
+                                <p id="rtcost"></p>
+                                <br>
+                                <p id="ability_name"></p>
+                                <p id="ability_text"></p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <img id="image" style="height: 350px; width: 250px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal"  role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Comparison Tool</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <table id="compare" class="table table-bordered table-striped sortable">
+                            <thead>
+                            <tr>
+                                <th class="col-sm-2">Name</th>
+                                <th class="col-sm-2">Set</th>
+                            </tr>
+                            </thead>
+                            <tbody id="compareTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="pokemon.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>
